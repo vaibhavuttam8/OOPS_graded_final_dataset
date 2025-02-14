@@ -1,0 +1,13 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented.
+
+2. The fileName for reading is hardcoded rather than using the specified name. Also, the way the player name is constructed using `in.next() + in.next()` assumes that player names consist of exactly two words, which may not always be the case. This could lead to incorrect player names being created. It relies on the next method terminating at commas, which it does not.
+
+3. The fileName for reading is hardcoded rather than using the specified name. The lines being written are not formatted in CSV format. The column names are only separated by spaces. The player details are not separated by any character.
+
+4. The `updatePlayerStats` method has a critical flaw in the way it checks for player names. The comparison `playerName == players.get(i).getPlayerName()` uses reference equality instead of value equality. This should be replaced with `.equals()` to ensure proper string comparison. Additionally, the method does not throw an `IllegalArgumentException` if no player matches the given name, which is a requirement.
+
+5. The method does not filter the players depending on the team name but rather only finds the runs of all players belonging to the team and their total runs only. It also has a potential division by zero issue if no players are found for the specified team. It should check if `count` is zero before performing the division. The method also uses `==` for string comparison, which is incorrect and should be replaced with `.equals()`. This part does not meet the requirements and needs improvement. Also, when returning the average runs scored, an integer division is performed which gives the incorrect answer and also is incompatible with the function signature.
+
+6. The `filter` method in the `TeamFilterStrategy` class uses `==` for string comparison, which is incorrect. It should use `.equals()` instead. 
+
+7. The `filter` method in `AllRounderStatsFilter` has a logical error. It should check if the player is an all-rounder before checking the criteria for runs and wickets. The current implementation does not filter by role.

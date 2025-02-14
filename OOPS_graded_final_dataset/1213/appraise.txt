@@ -1,0 +1,13 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is correctly implemented.
+
+3. The `writePlayersToFile` method is well-implemented and stores data in the specified format.
+
+4. The `updatePlayerStats` method is partially correct. It correctly updates the player's runs and wickets if a match is found. However, it fails to throw an `IllegalArgumentException` if no player matches the given name, which is a requirement.
+
+5. The `calculateTeamAverageRuns` method is mostly correct but lacks the necessary check for an empty list of players for the specified team. If no players are found, it should throw an `IllegalArgumentException`, which is a requirement.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented.
+
+7. The `filter` method in the `AllRounderStatsFilter` class has a logical error in the condition used to check if a player meets the criteria. The use of the bitwise OR operator (`|`) instead of the logical OR operator (`||`) is incorrect. Also he fails to see if the player's role is 'ALL_ROUNDER' or not. 

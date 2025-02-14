@@ -1,0 +1,13 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class does not handle FileNotFoundException.
+
+3. The `writePlayersToFile` method does not handle FileNotFoundException.It also has a small issue in the way it writes the column names. The column names should be separated by commas, but they are concatenated without any delimiter. This results in an incorrect format for the output file.
+
+4. The `updatePlayerStats` method has a flaw in the way it checks for player names. The comparison should use `.equals()` instead of `==` to compare strings. 
+
+5. The `calculateTeamAverageRuns` method is correctly implemented.
+
+6. The `filter` method in the `TeamFilterStrategy` class has the same issue as the `updatePlayerStats` method regarding string comparison. It uses `==` instead of `.equals()`, which could lead to incorrect filtering of players by team.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is correctly implemented.

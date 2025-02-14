@@ -1,0 +1,13 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented.
+
+2. The `readPlayersFromFile` method has several issues. The line splitting logic uses `split("")`, which will not correctly separate the CSV values. It should use `split(",")` instead. The method does not handle potential exceptions when reading the file since it does not check if the file exists before attempting to read it. The variable `details` is not correctly populated due to the incorrect split method, leading to potential `ArrayIndexOutOfBoundsException`.
+
+3. The method does not handle potential exceptions when reading the file since it does not check if the file exists before attempting to read it. The format of the column names and the player details does not match the expected CSV format (spaces instead of commas).
+
+4. The `updatePlayerStats` method has a logical error, the boolean yes is set to false even if a player matching the playerName is present since the flag is set in every iteration of the for loop. The exception thrown is a `RuntimeException`, but it should be an `IllegalArgumentException` as specified in the requirements.
+
+5. The `calculateTeamAverageRuns` method is incomplete. The method does not implement the logic to calculate the average runs and lacks the return statement. The boolean variable `yes` is not used correctly to check if any players were found. The exception thrown is a `RuntimeException`, but it should be an `IllegalArgumentException` as specified in the requirements.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented to filter players by team.
+
+7. The `filter` method in the `AllRounderStatsFilter` is correctly implemented.

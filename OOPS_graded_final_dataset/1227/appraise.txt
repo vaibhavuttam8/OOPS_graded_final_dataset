@@ -1,0 +1,13 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented, and returns values as required to sort in descending order.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is implemented correctly. Data is read, one line at a time, tokenized using ',' as the delimiter, a new player object is created and added to the list with is returned after closing the file.
+
+3. The `writePlayersToFile` method is correct. The file is opened for writing using a PrintWriter and every player's data is added to the file in the desired format. 
+
+4. The `updatePlayerStats` method is correctly implemented, but it does not throw an `IllegalArgumentException` if no player matches the given name, which is required by the specification.
+
+5. The `calculateTeamAverageRuns` method has a logical flaw. It attempts to calculate the average runs without checking if `playerNum` is zero, which would lead to a division by zero error. The exception handling is also incorrect; it should throw an `IllegalArgumentException` if no players are found instead of catching it.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented using the .equals() method and not == as strings are compared.
+
+7. The `filter` method in the `AllRounderStatsFilter` class fails to check for the role, if it matches with 'ALL_ROUNDER'.

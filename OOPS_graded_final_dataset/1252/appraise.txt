@@ -1,0 +1,13 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented.
+
+2. The `readPlayersFromFile` method hardcodes the file name instead of using the `fileName` parameter, and exception in case file is not found is not handled.
+
+3. Exception in case file is not found is not handled. The format of the output line does not match the expected CSV format (missing commas).
+
+4. The `updatePlayerStats` method has a logical error, the line `int neww = oldw = wickets;` incorrectly assigns `wickets` to `oldw` instead of summing it. It should be int neww = oldw + wickets;
+
+5. The method is correctly implemented.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented.
+
+7. The `filter` method in the `AllRounderStatsFilter` class has a syntax error. The condition `Role.valueOf(players.get(i).getRole()).equals("ALL_ROUNDER")` is incorrect because `getRole()` returns an enum, and you should compare it directly to `Role.ALL_ROUNDER`. The method also has a missing closing parenthesis for the `if` statement. Also we are checking the criteria with ==, while it should have been <.

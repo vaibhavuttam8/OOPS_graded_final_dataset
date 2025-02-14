@@ -1,0 +1,13 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. The logic is sound, and it returns the expected values based on the comparison.
+
+2. The `readPlayersFromFile` method is incomplete.  The student has not implemented the logic to skip the first line, split and parse data, or create `Player` objects from the data read. The line `players.add(player);` is incorrect as `player` is not defined in the method. The student also incorrectly returns the lit outside the mthod
+
+3. The `writePlayersToFile` method is also incomplete. The student has not implemented any logic to write player data to the file. The file path provided has incorrect escape sequences (e.g., `C:\Users\user\Desktop\SS_24_25_CBT.txt` should use double backslashes or forward slashes).
+
+4. In the updatePlayerStats method, the variable playername is not defined; it should be playerName. The comparison for matching player names should use .equals() instead of ==, as == only checks reference equality for strings. Additionally, the student incorrectly replaces the wickets instead of adding them; p.setWicketsTaken(wickets) should be p.setWicketsTaken(p.getWicketsTaken() + wickets). Moreover, the logic for throwing an exception is incorrect; the exception should only be thrown if no player matches after checking all players, not within the loop.
+
+5. In the calculateTeamAverageRuns method, the comparison p.getTeamName() == teamName uses == instead of .equals() for string comparison. The count variable is incorrectly incremented with count += count instead of count++, and the totalRuns is not being updated inside the loop.
+
+6. The `filter` method in the `TeamFilterStrategy` class has a similar issue with the comparison of strings. The `==` operator should not be used for string comparison; `equals()` should be used instead. Additionally, the list `p1` should be of type `List<Player>` instead of `ArrayList<String>`.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is not implemented at all, which is a significant omission.

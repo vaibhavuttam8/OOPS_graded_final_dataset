@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class does not handle the FileNotFoundException.
+
+3. The `writePlayersToFile` method has a significant issue. The student fails to handle the FileNotFoundException. The student fails to add the headings to tehe columns. The output format is incorrect; it concatenates player details without any delimiters.
+
+4. The `updatePlayerStats` method is correctly implemented.
+
+5. The `calculateTeamAverageRuns` method is correctly implemented.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is incorrect. Although the condition of the player's role being 'ALL_ROUNDER' is considered, the minimum runs and wickets criteria are not correctly handled as '>' operator has been used instead of '>='
+
+The student's performance is commendable, with most parts of the code correctly implemented. However, the `writePlayersToFile` method has a critical flaw in the output format, which affects the overall functionality. Overall, the student demonstrates a solid understanding of the concepts but needs to pay attention to detail in output formatting.

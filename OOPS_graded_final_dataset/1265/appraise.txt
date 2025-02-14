@@ -1,0 +1,14 @@
+1. The `compare` method in `RunsComparator` is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values based on the comparison, earning full marks for this part.
+
+2. The `readPlayersFromFile` method has several issues, The condition `while(sc.nextLine()!="")` is incorrect; it should use `sc.hasNextLine()` instead to skip header line. The while loop condition is incorrect (sc.nextLine() != ""). This will cause an infinite loop or incorrect behavior The instantiation of `Player` is also incorrect; it should use the constructor with parameters instead of trying to assign values to a non-existent object. The method does not close the `Scanner` object.
+
+3. The `writePlayersToFile` method is not implemented at all.
+
+4.The updatePlayerStats method has multiple issues. The use of Iterator<Player> t = new players.Iterator(); is incorrect; it should be Iterator<Player> t = players.iterator();. The method attempts to access player properties incorrectly, using players.runsScored instead of accessing the player object. The logic for updating runs and wickets is not correctly implemented
+
+5. the calculateTeamAverageRuns method has several issues. The use of Iterator<Player> t = new players.iterator(); is incorrect; it should be Iterator<Player> t = players.iterator();. The method attempts to access player properties incorrectly, using t.getTeamName.equals(teamName) instead of t.next().getTeamName().equals(teamName). The calculation of average runs does not handle the case where no players are found correctly.
+
+6. The filter method in TeamFilterStrategy has similar issues. The use of Iterator<Player> t = new players.iterator(); is incorrect; it should be Iterator<Player> t = players.iterator();. The method attempts to access player properties incorrectly, using t.getTeamName.equals(teamName) instead of t.next().getTeamName().equals(teamName)
+
+7. The filter method in AllRounderStatsFilter also has several issues. The use of Iterator<Player> t = new players.iterator(); is incorrect; it should be Iterator<Player> t = players.iterator();. The method attempts to access player properties incorrectly, using t.role.equals("ALL_ROUNDER") instead of checking the role of the player object returned by t.next().
+

@@ -1,0 +1,13 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented. It returns values as specified.
+
+2. The 'readPlayersFromFile' method lacks proper error handling for file opening, unnecessarily uses a loop for splitting lines, incorrectly calls addLast() instead of add().
+
+3. The `writePlayersToFile` method has a few issues. The file is being created as "Output.txt" instead of the specified `fileName`. Also, the method should use `pw.println()` instead of `pw.append()` to ensure each player's data is written on a new line. Also, error handling when opeing file is not done.
+
+4. The 'updatePlayerStats' method correctly iterates through the list of players, checks if a player’s name matches the given playerName (case-insensitively), and updates their runs and wickets by adding the provided values. If no match is found, it throws an IllegalArgumentException, ensuring that only valid players have their stats modified. 
+
+5. The `calculateTeamAverageRuns` method correctly iterates through the list of players, checks if a player’s team name matches the given team name (case-insensitively), and adds runs scored by them to the sum. If no match is found, it throws an IllegalArgumentException, ensuring that only players of the specified team are considered. 
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented.
+
+7. The `filter` method in the `AllRounderStatsFilter` class is mostly correct but uses .equals() method to compare role with 'ALL_ROUNDER', instead of '=='.

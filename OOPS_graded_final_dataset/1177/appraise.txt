@@ -1,0 +1,13 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented.
+
+2. The `readPlayersFromFile` method does not check if the file exists or not.
+
+3. The `writePlayersToFile` method is correctly implemented.
+
+4. The `updatePlayerStats` method is correctly implemented.
+
+5. The `calculateTeamAverageRuns` method does not throw an exception if no players from the specified team are found.
+
+6. The `filter` method in the `TeamFilterStrategy` class is correctly implemented.
+
+7. The `filter` method in the `AllRounderStatsFilter` class has a logical error. It does not check the criteria with >.

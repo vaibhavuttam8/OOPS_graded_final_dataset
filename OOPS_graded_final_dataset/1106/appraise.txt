@@ -1,0 +1,14 @@
+1. The `compare` method in the `RunsComparator` class is incorrectly implemented. The use of `compare` method is not valid; it should be `Integer.compare(p1.getRunsScored(), p2.getRunsScored())` to compare the runs correctly. The return values are also not correctly structured for the required logic.
+
+2. In the `readPlayersFromFile` method the file's content is not processed correctly (lines need to be split into information), the Player objects are not created or added to the list, and the Scanner is not closed after reading.
+
+3. The `writePlayersToFile` method is not implemented at all, which is a significant omission as it is required to write player data back to a file.
+
+4. In the `updatePlayerStats` method, the loop uses `players.length`, which is incorrect since `players` is a `List`. It should use `players.size()`. The comparison for player names should use `.equals()` instead of `==`. The `throw` statement is incorrectly written; it should be `throw new IllegalArgumentException("no change");`.
+
+5. The `calculateTeamAverageRuns` method has several issues: it uses `players.length` instead of `players.size()`, and the `if` statement for checking `num == 0` is incorrectly placed inside the loop. The `throw` statement is incorrectly written (throw is missing). The return statement should also be corrected to return a double value.
+
+6. In the `filter` method of `TeamFilterStrategy`, the same issue with `players.length` exists. The string comparison uses == instead of equals() which is incorrct.
+
+7. The `filter` method in `AllRounderStatsFilter` has multiple issues: it incorrectly uses `players.length`, the list type is incorrectly declared as `List<Players>`, and the condition for checking runs and wickets should use `>=` instead of `==` to meet the criteria.
+

@@ -1,0 +1,13 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. This part is correct and earns full marks.
+
+2. In the `readPlayersFromFile` method, the declaration of `PlayerList` should use `ArrayList<Player>` instead of `List<Player>`. String array to store different pieces of information is incorrectly instantiated as String StringArray[] instead of String[] StringArray. Additionally, the method attempts to call `Role(StringArray[1])`, which is incorrect; it should call `Role.fromString(StringArray[1])`. The `br.close()` statement is incorrectly placed inside the loop, which will cause the method to close the reader prematurely. The return statement is also incorrectly placed inside the loop, which will cause the method to return after reading only one player. These issues result in compilation errors and incorrect logic.
+
+3. The line `writer.write("PlayerName,Role,RunsScored,WicketsTaken,TeamName")` is missing a semicolon at the end.
+
+4. The `updatePlayerStats` method is correctly implemented and updates the player's statistics as required.
+
+5. In the `calculateTeamAverageRuns` method, the variable `TeamPlayers` is used before it is declared, leading to a compilation error. The filtering logic should be done using the `filter` method, but it is incorrectly implemented. Calculation of total runs is done incorrectly by using equals() method instead of filtering the players using the filter method.
+
+6. The `filter` method in the `TeamFilterStrategy` class incorrectly declares `emptylist` as `List<Player> empylist=new List<>();`, which should be `List<Player> emptylist = new ArrayList<>();`. This will cause a compilation error. The method logic is otherwise correct.
+
+7. The `filter` method in the `AllRounderStatsFilter` class does not perform a check of whether the player is an all rounder or not.

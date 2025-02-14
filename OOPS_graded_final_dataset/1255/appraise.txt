@@ -1,0 +1,13 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented.
+
+2. The `readPlayersFromFile` method in the `CricketDataHandler` class is incomplete. While it initializes the list and attempts to read from the file, it does not add the created `Player` objects to the `players` list, nor does it close the `Scanner` object. This results in a failure to return the list of players. (4/9 marks)
+
+3. The `writePlayersToFile` method opens the file in append mode (`FileOutputStream(fileName, true)`), which is not appropriate for writing the entire player list.
+
+4. The `updatePlayerStats` method correctly uses `==` for string comparison instead of `.equals()`, which can lead to incorrect behavior.
+
+5. The `calculateTeamAverageRuns` method is correctly implemented.
+
+6. The `filter` method in the `TeamFilterStrategy` class has a logic error. It incorrectly breaks the loop after finding the first matching player instead of adding all matching players to the list. It also throws an exception if no players match, which is not necessary as the method should return an empty list instead.
+
+7. The `filter` method in the `AllRounderStatsFilter` class checks the condition with <=, instead it should have been <. Also it returns prematurely after checking the first player. It should iterate through all players and only return after the loop completes. (2/5 marks)

@@ -1,0 +1,15 @@
+1. The `compare` method in the `RunsComparator` class is correctly implemented to compare players based on their runs scored in descending order. It returns the expected values as per the requirements. 
+
+2. The `readPlayersFromFile` method has several issues such as
+The parsing logic is correct however it is overly complex and could be simplified using `String.split(",")`. The method does not add any `Player` objects to the `PlayersList`, which means it will always return an empty list.
+
+3. The `writePlayersToFile` method is not implemented, which is a significant omission. 
+
+4. The `updatePlayerStats` method has a critical flaw: it uses `==` to compare strings, which should be replaced with `.equals()`. This will lead to incorrect behavior when checking player names. The method also incorrectly updates the player run and wickets. It overrides it instead.
+
+5. The `calculateTeamAverageRuns` method also uses `==` for string comparison, which is incorrect. 
+
+6. The `filter` method in the `TeamFilterStrategy` class has the same issue with string comparison as the previous methods.  
+
+7. The `filter` method in the `AllRounderStatsFilter` class does not check if the player is an all-rounder 
+
