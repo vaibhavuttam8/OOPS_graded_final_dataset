@@ -1,0 +1,8 @@
+Grading Comparison Metrics
+==========================
+
+Pearson Correlation: 0.9816
+Spearman Correlation: 0.9551
+Mean Absolute Error: 0.0563
+Mean Squared Error: 0.0050
+Submissions Compared: 32.0000
